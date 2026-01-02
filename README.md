@@ -1,4 +1,4 @@
-# Pocket Tactician (Or your chosen name)
+# Team Builder
 
 ![License](https://img.shields.io/github/license/TheLoquacious1234/Team-Builder) ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
