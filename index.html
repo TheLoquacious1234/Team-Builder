@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokemon Team Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Pokemon Team Builder</h1>
+    <p>Build a team of up to 6 PokC)mon and check basic type coverage.</p>
+  </header>
+
+  <main class="app-main">
+    <section class="builder-panel">
+      <h2>Team slots</h2>
+      <div id="team-slots" class="team-slots">
+        <!-- Slots are populated by JS -->
+      </div>
+      <button id="clear-team" class="btn btn-secondary">Clear team</button>
+    </section>
+
+    <section class="pokemon-selector">
+      <h2>Add a Pokemon</h2>
+      <form id="add-form" class="add-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Pikachu"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="primary-type">Primary type</label>
+          <select id="primary-type" name="primaryType" required>
+            <option value="">Select type...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="secondary-type">Secondary type (optional)</label>
+          <select id="secondary-type" name="secondaryType">
+            <option value="">None</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="role">Role</label>
+            <select id="role" name="role">
+              <option value="">Flex</option>
+              <option value="Lead">Lead</option>
+              <option value="Wall">Wall</option>
+              <option value="Sweeper">Sweeper</option>
+              <option value="Support">Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Notes</label>
+            <input
+              id="notes"
+              name="notes"
+              type="text"
+              placeholder="e.g. Choice Scarf, hazard setter"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add to team</button>
+      </form>
+    </section>
+
+    <section class="analysis-panel">
+      <h2>Type coverage (offensive)</h2>
+      <p class="analysis-hint">
+        This is a basic overview of which types your team can hit super-effectively,
+        based on each member's primary/secondary type as a proxy for STAB coverage.
+      </p>
+      <div id="coverage-grid" class="coverage-grid">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>
+      Fan-made tool for educational and entertainment purposes.
+      Not affiliated with Nintendo, Game Freak, or The Pokemon Company.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
